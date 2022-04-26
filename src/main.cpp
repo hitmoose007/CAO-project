@@ -1,7 +1,3 @@
-/*********
-  Rui Santos
-  Complete project details at http://randomnerdtutorials.com
-*********/
 
 // Load Wi-Fi library
 #include <WiFi.h>
@@ -201,4 +197,7 @@ void loop()
 
         Serial.println("\nConnected to WiFi Again \n");
     }
+
+    
+
 }
