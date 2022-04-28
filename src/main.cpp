@@ -2,6 +2,7 @@
 // Load Wi-Fi library
 #include <WiFi.h>
 
+
 // Replace with your network credentials
 const char *ssid = "Kashmir house";
 const char *password = "Pakistan47";
@@ -197,7 +198,5 @@ void loop()
 
         Serial.println("\nConnected to WiFi Again \n");
     }
-
-    
 
 }
