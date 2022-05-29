@@ -13,28 +13,20 @@
  */
 // returns distance
 
+float duration, cm; // distances for variables
 
+void setSensor(int trigPin, int echoPin);
+int runSesnor(int trigPin, int echoPin);
 
-int trigPin = 13; // globals for default
-int echoPin = 12; 
-float duration, cm; // distances for variables 
-
-
-void setSensor();
-int runSesnor();
-
-
-void setSensor()
+void setSensor(const int trigPin, const int echoPin)
 {
-    
-    long duration, cm;
 
     // Define inputs and outputs
     pinMode(trigPin, OUTPUT);
     pinMode(echoPin, INPUT);
 }
 
-int runSensor()
+int runSensor(int trigPin, int echoPin)
 {
 
     digitalWrite(trigPin, LOW);
@@ -49,9 +41,6 @@ int runSensor()
     pinMode(echoPin, INPUT);
     duration = pulseIn(echoPin, HIGH);
 
-
- 
-  
     // Convert the time into a distance
     cm = (duration / 2.0) / 29.1; // Divide by 29.1 or multiply by 0.0343
     delay(250);
